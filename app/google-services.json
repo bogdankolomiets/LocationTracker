@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "122681450112",
+    "firebase_url": "https://smarttest-549fa.firebaseio.com",
+    "project_id": "smarttest-549fa",
+    "storage_bucket": "smarttest-549fa.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:122681450112:android:28110e1607f02951",
+        "android_client_info": {
+          "package_name": "com.example.bogdan.testsmartadventure"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "122681450112-ojjct71avbip6uu1t9qbcig9t5mb6ilt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDz6aRFPvTLGsr_HhsHu0kQS0QqQzpuCuI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
