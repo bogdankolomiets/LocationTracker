@@ -5,15 +5,12 @@ import android.support.annotation.Nullable;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.bogdan.testsmartadventure.presenter.UserListPresenter;
 import com.example.bogdan.testsmartadventure.presenter.impl.UserListPresenterImpl;
-import com.example.bogdan.testsmartadventure.util.DBUtils;
 import com.example.bogdan.testsmartadventure.view.base.BaseFragment;
 import com.example.bogdan.testsmartadventure.R;
 import com.example.bogdan.testsmartadventure.adapter.UserFirebaseAdapter;
@@ -67,7 +64,7 @@ public class UserListFragment extends BaseFragment implements UserListView {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
-            case R.id.go_map:
+            case R.id.goMap:
                 UserLocationFragment fragment = new UserLocationFragment();
                 getActivity().getSupportFragmentManager().beginTransaction()
                         .replace(R.id.container, fragment, null)

@@ -2,8 +2,11 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
-        android:id="@+id/go_map"
+        android:id="@+id/goMap"
         android:title="map"
         android:icon="@mipmap/ic_map_white_24dp"
         app:showAsAction="ifRoom"/>
+    <item
+        android:id="@+id/signOut"
+        android:title="Sign Out"/>
 </menu>

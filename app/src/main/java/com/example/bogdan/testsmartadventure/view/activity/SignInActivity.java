@@ -49,9 +49,6 @@ public class SignInActivity extends BaseActivity implements SignInView, View.OnC
     @Bind(R.id.signUpBtn)
     Button mSignUpButton;
 
-    @Bind(R.id.signOutBtn)
-    Button mSignOutButton;
-
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -64,7 +61,6 @@ public class SignInActivity extends BaseActivity implements SignInView, View.OnC
 
         mSignInButton.setOnClickListener(this);
         mSignUpButton.setOnClickListener(this);
-        mSignOutButton.setOnClickListener(this);
 
     }
 
@@ -76,9 +72,6 @@ public class SignInActivity extends BaseActivity implements SignInView, View.OnC
                 break;
             case R.id.signUpBtn:
                 mPresenter.onSignUpClick();
-                break;
-            case R.id.signOutBtn:
-                mPresenter.onSignOutClick();
                 break;
         }
     }
