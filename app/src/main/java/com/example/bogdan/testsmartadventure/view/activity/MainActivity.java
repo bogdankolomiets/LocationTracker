@@ -44,8 +44,8 @@ public class MainActivity extends BaseActivity implements MainView {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.main_menu, menu);
-        if (isMobilePortraiteOrientation() || isMobileDevice()) {
-            menu.findItem(R.id.goMap).setVisible(true);
+        if (!isMobilePortraiteOrientation() || !isMobileDevice()) {
+            menu.findItem(R.id.goMap).setVisible(false);
         }
 
         return true;
