@@ -6,9 +6,8 @@
 
     <include layout="@layout/toolbar" />
 
-    <fragment
+    <FrameLayout
         android:id="@+id/container"
-        android:name="com.example.bogdan.testsmartadventure.view.fragment.UserListFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 </LinearLayout>

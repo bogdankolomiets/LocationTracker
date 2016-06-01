@@ -7,6 +7,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 
@@ -61,5 +62,20 @@ public class UserListFragment extends BaseFragment implements UserListView {
     @Override
     public void showUsers(Query users) {
         mUserList.setAdapter(new UserFirebaseAdapter(users));
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.go_map:
+                UserLocationFragment fragment = new UserLocationFragment();
+                getActivity().getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.container, fragment, null)
+                        .addToBackStack(null)
+                        .commit();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
     }
 }
