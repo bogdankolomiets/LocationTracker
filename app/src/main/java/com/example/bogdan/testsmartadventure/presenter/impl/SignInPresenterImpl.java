@@ -33,6 +33,7 @@ public class SignInPresenterImpl implements SignInPresenter {
         String password = mView.getPasswordField();
 
         if (TextUtils.isEmpty(email) || TextUtils.isEmpty(password)) {
+            mView.showError("Please, enter your data");
             return;
         }
 
@@ -58,6 +59,7 @@ public class SignInPresenterImpl implements SignInPresenter {
         String passworrd = mView.getPasswordField();
 
         if (TextUtils.isEmpty(email) || TextUtils.isEmpty(passworrd)) {
+            mView.showError("Please, enter your data");
             return;
         }
 

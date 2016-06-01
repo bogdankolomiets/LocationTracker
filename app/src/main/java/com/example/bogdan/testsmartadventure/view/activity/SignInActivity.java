@@ -52,12 +52,15 @@ public class SignInActivity extends BaseActivity implements SignInView, View.OnC
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(LAYOUT);
-        ButterKnife.bind(this);
-
-        mPresenter = new SignInPresenterImpl(this);
 
         mAuth = FirebaseAuth.getInstance();
+        if (mAuth.getCurrentUser() != null) {
+            goToApplication();
+        }
+
+        setContentView(LAYOUT);
+        ButterKnife.bind(this);
+        mPresenter = new SignInPresenterImpl(this);
 
         mSignInButton.setOnClickListener(this);
         mSignUpButton.setOnClickListener(this);
@@ -88,12 +91,11 @@ public class SignInActivity extends BaseActivity implements SignInView, View.OnC
 
     @Override
     public void showError(String exception) {
-        Toast.makeText(this, exception, Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, exception, Toast.LENGTH_LONG).show();
     }
 
     @Override
     public void goToApplication() {
-
         startActivity(new Intent(SignInActivity.this, MainActivity.class));
         finish();
     }
