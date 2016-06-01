@@ -1,4 +1,4 @@
-package com.example.bogdan.testsmartadventure;
+package com.example.bogdan.testsmartadventure.view.base;
 
 import android.app.ProgressDialog;
 import android.support.v7.app.AppCompatActivity;
